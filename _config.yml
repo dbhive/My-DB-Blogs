@@ -1,11 +1,11 @@
 # Site wide configuration
 
-title: So Simple Theme
+title: DBHive
 locale: en_US
-description: A simple and clean responsive Jekyll theme for words and photos.
+description: DBHive DB blogs
 logo: site-logo.png
 search: true
-url: //mmistakes.github.io/so-simple-theme
+url: //dbhive.github.io/My-DB-Blogs
 
 
 # Jekyll configuration
@@ -32,11 +32,11 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 
 # Site owner
 owner:
-  name: Michael Rose
+  name: DBHIVE
   avatar: michael-rose-photo.jpg
-  email: michael@mademistakes.com
+  email: dbhiveinc@gmail.com
   disqus-shortname: sosimpletheme
-  twitter: mmistakes
+  twitter: dbhive
   facebook: michaelrose
   github: mmistakes
   stackexchange:
