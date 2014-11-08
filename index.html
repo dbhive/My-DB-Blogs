@@ -4,8 +4,23 @@ title: Latest Posts
 excerpt: "A simple and clean responsive Jekyll theme for words and photos."
 ---
 
-<ul class="post-list">
-{% for post in site.posts limit:10 %} 
-  <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a></article></li>
-{% endfor %}
-</ul>
+<<p>
+<pre><code>The era of Polyglot Persistence has begun-- Martin Fowler.
+</code></pre>
+</p>
+<p>
+And we at DBHive firmly believe in this.
+</p>
+<p>Gone are the days when only option for data persistance was relational DBs like DB2,Oracle ,SQL Server etc.
+We have wide range of options available today. This is actually a good and a bad news. 
+Bad news because now we have a choice, and if we make a bad choise we are bound to be doomed.
+</p>
+<p>Over the last few years there's been an explosion of interest in new languages, zeel to store new varienty of data and do more and more analytics and different kind of analytics.
+</p>
+<p>One of the consequences of this is that we are moving towards polyglot persistence - where any decent sized organization or teams will have a variety of different data storage technologies for different kinds of data. We are not saying that relational dbs will go away , there will still be large amounts of it managed in relational stores, but we need different kind of DBs to store different kind of data.
+We should be first asking how we want to manipulate the data, what is the variety of data and what analytics we want to perform on this data and only then figuring out which persistance technology is the best bet for it.
+This will obviously come at a cost in complexity. Each of these technologies will have a different data model. Tradional entity relational models might not work. Data modellers zeel for normalizing the data and then de-normalizing will have to change. Application developers store the data in different model in applications then DBs.. This has to change and is changing.
+</p>
+<p>Now a days its not bad to have some flavour of key-value DBs, column oriented DBs , document oriented DBs and reliational DBs coexisting within a same EDW department of a decent size organization. 
+Watch out this space for more thoughs on why/what and how in emerging data persistance technologies!!
+</p>
