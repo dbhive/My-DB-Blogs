@@ -3,8 +3,7 @@ layout: page
 title: About DBHive Inc
 excerpt: "DBHive Inc is expert in DB Design , data warehousing and implementations."
 modified: 2014-10-08T19:44:38.564948-04:00
-image:
-  feature: so-simple-sample-image-4.jpg
+
   credit: DBHive
   creditlink: http://dbhive.co
 ---
