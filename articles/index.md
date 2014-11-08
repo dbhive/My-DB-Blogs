@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sample Articles
+title: DB Blogs
 excerpt: "An archive of articles sorted by date."
 ---
 
