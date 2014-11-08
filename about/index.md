@@ -1,10 +1,10 @@
 ---
 layout: page
 title: About DBHive Inc
-excerpt: "DBHive Inc is expert in DB Design and implementations."
+excerpt: "DBHive Inc is expert in DB Design , data warehousing and implementations."
 modified: 2014-10-08T19:44:38.564948-04:00
 image:
-  feature: 
+  feature: so-simple-sample-image-4.jpg
   credit: DBHive
   creditlink: http://dbhive.co
 ---
@@ -22,7 +22,9 @@ Looking for a help on Database design ? Need help in deciding which DB to use ?
 * Identifying which DB to use in which condition.
 * DB Design.
 * Database Implementations.
-* Support for databases
+* Support for databases.
+* Datawarehousing
+* Big Data
 
 <a markdown="0" href="{{ site.url }}/theme-setup" class="btn">DBHive</a>
  
