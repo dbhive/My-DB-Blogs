@@ -3,14 +3,11 @@
 - title: About
   url: /about/
 
-- title: Article
+- title: Data Persistence
   url: /articles/
-
-- title: Blog
+  
+- title: Agile
   url: /blog/
-
-- title: Theme Setup
-  url: /theme-setup/
 
 - title: DB2 Blog
   url: http://db2udbhelp.blogspot.in/
