@@ -1,5 +1,7 @@
 # Site navigation links
-
+- title: Home
+  url: http://dbhive.github.io/My-DB-Blogs/
+  
 - title: About
   url: /about/
 
