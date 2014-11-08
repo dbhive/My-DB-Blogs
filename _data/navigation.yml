@@ -3,7 +3,7 @@
 - title: About
   url: /about/
 
-- title: Agile
+- title: Article
   url: /articles/
 
 - title: Blog
@@ -14,6 +14,3 @@
 
 - title: DB2 Blog
   url: http://db2udbhelp.blogspot.in/
-  
-- title: DB2 DBA Blog
-  url: http://db2udbadmin.blogspot.in/
