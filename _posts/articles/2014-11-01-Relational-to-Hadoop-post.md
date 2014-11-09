@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Journey from relational DB to hadoop
-excerpt: "Journey from Relational DB to Hadoop.Ó
+excerpt: "Journey from relational DB to hadoop."
 modified: 2014-11-01
 categories: articles
 tags: [sample-post]
