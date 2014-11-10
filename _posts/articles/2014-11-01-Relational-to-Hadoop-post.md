@@ -4,6 +4,7 @@ title: Journey from relational DB to hadoop
 excerpt: "Journey from relational DB to hadoop."
 modified: 2014-11-01
 categories: articles
+author: DB_Hive
 tags: [Hadoop]
 comments: true
 share: true
@@ -25,8 +26,8 @@ In the meanwhile, Tom started de-normalizing the data. This helped in reducing #
 Tom, introduced one more server which was exclusive for reporting. This made queries faster but further introduced consistency issues.
 By Now Tom has reached a dead end.
 
-Here comes *Hadoop* .
+Here comes **Hadoop** .
 
-The Apacheª Hadoop¨ project develops open-source software for reliable, scalable, distributed computing.
+The Apacheª Hadoop project develops open-source software for reliable, scalable, distributed computing.
 The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. It is designed to scale up from single servers to thousands of machines, each offering local computation and storage. Rather than rely on hardware to deliver high-availability, the library itself is designed to detect and handle failures at the application layer, so delivering a highly-available service on top of a cluster of computers, each of which may be prone to failures.
 
