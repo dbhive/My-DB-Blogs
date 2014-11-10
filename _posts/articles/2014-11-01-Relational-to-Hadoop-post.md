@@ -23,10 +23,10 @@ Few months down the line business was expanding very fast.. and so was data. and
 In the meanwhile, Tom started de-normalizing the data. This helped in reducing # of joins in queries but introduced redundancy . This had its own problems . It was difficult to maintain consistency.
 
 Tom, introduced one more server which was exclusive for reporting. This made queries faster but further introduced consistency issues. 
-By Now Tom has reached a dead end.
+By Now Tom has reached a dead end. 
 
 Here comes *Hadoop* . 
 
-The Apacheª Hadoop¨ project develops open-source software for reliable, scalable, distributed computing.
+The ApacheÂª HadoopÂ¨ project develops open-source software for reliable, scalable, distributed computing.
 The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. It is designed to scale up from single servers to thousands of machines, each offering local computation and storage. Rather than rely on hardware to deliver high-availability, the library itself is designed to detect and handle failures at the application layer, so delivering a highly-available service on top of a cluster of computers, each of which may be prone to failures.
 
