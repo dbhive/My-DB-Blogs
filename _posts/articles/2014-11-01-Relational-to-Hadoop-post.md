@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Journey from relational DB to hadoop
-excerpt: "Journey from relational DB to hadoop."
+title: Journey from Relational DB to Hadoop
+excerpt: "Journey from Relational DB to Hadoop."
 modified: 2014-11-01
 categories: articles
 author: DB_Hive
