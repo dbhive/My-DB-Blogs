@@ -14,8 +14,6 @@ comments: true
 share: true
 ---
 
-
-
 # Various File Formats supported in Hadoop:
 
 ### 1.Text/CSV Files
