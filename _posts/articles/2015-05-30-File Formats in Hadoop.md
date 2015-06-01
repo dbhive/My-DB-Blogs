@@ -16,7 +16,7 @@ share: true
 ### 1.Text/CSV Files
 CSV files are still quite common and often used for exchanging data between Hadoop and external systems. They are readable and ubiquitously parsable. They come in handy when doing a dump from a database or bulk loading data from Hadoop into an analytic database. However, CSV files do not support block compression, thus compressing a CSV file in Hadoop often comes at a significant read performance cost.
 When working with Text/CSV files in Hadoop, never include header or footer lines. Each line of the file should contain a record. This, of course, means that there is no metadata stored with the CSV file. You must know how the file was written in order to make use of it. Also, since the file structure is dependent on field order, new fields can only be appended at the end of records while existing fields can never be deleted. As such, CSV files have limited support for schema evolution.
-
+ 
 ### 2. JSON Records
 
 JSON records are different from JSON Files in that each line is its own JSON datum -- making the files splittable. Unlike CSV files, JSON stores metadata with the data, fully enabling schema evolution. However, like CSV files, JSON files do not support block compression. Additionally, JSON support was a relative late comer to the Hadoop toolset and many of the native serdes contain significant bugs. Fortunately, third party serdes are frequently available and often solve these challenges. You may have to do a little experimentation and research for your use cases.
