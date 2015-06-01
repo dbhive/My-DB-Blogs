@@ -35,7 +35,7 @@ One note on Parquet file support with Hive... It is very important that Parquet 
 
 
 #### How to choose a file format?
-There are three types of performance to consider: ├è├è
+There are three types of performance to consider: 
 * Write performance -- how fast can the data be written.
 * Partial read performance -- how fast can you read individual columns within a file.
 * Full read performance -- how fast can you read every data element in a file.
@@ -45,11 +45,11 @@ A columnar, compressed file format like Parquet or ORC may optimize partial and 
 
 As discussed, each file format is optimized by purpose. Your choice of format is driven by your use case and environment. Here are the key factors to consider:
 * Hadoop Distribution- Cloudera and Hortonworks support/favor different formats
-* Schema Evolution- Will the structure of your data evolve? ├èIn what way?
-* Processing Requirements├è- Will you be crunching the data and with what tools?
-* Read/Query Requirements- Will you be using SQL on Hadoop? ├èWhich engine?
+* Schema Evolution- Will the structure of your data evolve? In what way?
+* Processing Requirements- Will you be crunching the data and with what tools?
+* Read/Query Requirements- Will you be using SQL on Hadoop? Which engine?
 * Extract Requirements- Will you be extracting the data from Hadoop for import into an external database engine or other platform?
-* Storage Requirements- Is data volume a significant factor? ├èWill you get significantly more bang for your storage buck through compression?
+* Storage Requirements- Is data volume a significant factor? Will you get significantly more bang for your storage buck through compression?
 
 
 So, with all the options and considerations are there any obvious choices? ├èIf you are storing intermediate data between MapReduce jobs, then Sequence files are preferred. If query performance against the data is most important, ORC (HortonWorks/Hive) or Parquet (Cloudera/Impala) are optimal --- but these files will take longer to write. (We├òve also seen order of magnitude query performance improvements when using Parquet with Spark SQL.) Avro is great if your schema is going to change over time, but query performance will be slower than ORC or Parquet. CSV files are excellent if you are going to extract data from Hadoop to bulk load into a database.
