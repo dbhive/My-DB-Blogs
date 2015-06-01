@@ -60,5 +60,4 @@ As discussed, each file format is optimized by purpose. Your choice of format is
 
 
 So, with all the options and considerations are there any obvious choices? ÊIf you are storing intermediate data between MapReduce jobs, then Sequence files are preferred. If query performance against the data is most important, ORC (HortonWorks/Hive) or Parquet (Cloudera/Impala) are optimal --- but these files will take longer to write. (WeÕve also seen order of magnitude query performance improvements when using Parquet with Spark SQL.) Avro is great if your schema is going to change over time, but query performance will be slower than ORC or Parquet. CSV files are excellent if you are going to extract data from Hadoop to bulk load into a database.
-- See more at: http://inquidia.com/news-and-info/hadoop-file-formats-its-not-just-csv-anymore#sthash.cU4A8JKl.dpuf
 
