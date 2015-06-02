@@ -2,8 +2,8 @@
 --- layout: post
 title: "SQL on Hadoop"
 excerpt: "SQL on Hadoop"
---- categories: articles
-tags: [sample-post, readability, test]
+categories: articles
+tags: [Hadoop]
 author: db hive
 comments: true
 share: true
