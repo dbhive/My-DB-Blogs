@@ -1,5 +1,5 @@
 ---
---- layout: post
+ layout: post
 title: "SQL on Hadoop"
 excerpt: "SQL on Hadoop"
 categories: articles
