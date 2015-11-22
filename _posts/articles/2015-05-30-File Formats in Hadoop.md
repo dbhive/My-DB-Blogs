@@ -2,7 +2,7 @@
 layout: post
 title: File Formats in Hadoop
 excerpt: "Various types of File Formats in Hadoop"
-modified: 2015-05-30
+modified: 2015-10-30
 categories: articles
 author: DB_Hive
 tags: [Hadoop]
