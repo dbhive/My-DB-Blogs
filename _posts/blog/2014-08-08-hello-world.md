@@ -15,3 +15,5 @@ Check out the [Agile Manifesto][jekyll] for more info on Agile .
 
 [jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll]:    http://agilemanifesto.org/
+
+Thanks to all the contributers.
