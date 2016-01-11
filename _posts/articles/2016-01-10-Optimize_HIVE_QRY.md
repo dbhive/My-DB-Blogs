@@ -97,7 +97,7 @@ analyze table tweets compute statistics for columns;
 That’s it. Now executing a query using this table should result in a different execution plan that is faster because 
 of the cost calculation and different execution plan created by Hive.
 
-### 5 Use map-side joins 
+### 5: Use map-side joins 
 
 
 Another technique is to use map-side joins – by setting the following params:
