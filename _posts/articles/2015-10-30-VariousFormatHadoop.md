@@ -79,9 +79,9 @@ values and not log any errors. Unlike Hive, Impala handles mixed case column nam
 
 #### How to choose a file format?
 There are three types of performance to consider: 
-* Write performance -- how fast can the data be written.
-* Partial read performance -- how fast can you read individual columns within a file.
-* Full read performance -- how fast can you read every data element in a file.
+# Write performance -- how fast can the data be written.#
+# Partial read performance -- how fast can you read individual columns within a file.#
+# Full read performance -- how fast can you read every data element in a file.#
 
 
 A columnar, compressed file format like Parquet or ORC may optimize partial and full read performance, but they do so at the expense
@@ -90,12 +90,12 @@ are slow for reads. You may end up with multiple copies of your data each format
 
 As discussed, each file format is optimized by purpose. Your choice of format is driven by your use case and environment. 
 Here are the key factors to consider:
-* Hadoop Distribution- Cloudera and Hortonworks support/favor different formats
-* Schema Evolution- Will the structure of your data evolve.
-* Processing Requirements- Will you be crunching the data and with what tools.
-* Read/Query Requirements- Will you be using SQL on Hadoop? Which engine.
-* Extract Requirements- Will you be extracting the data from Hadoop for import into an external database engine or other platform.
-* Storage Requirements- Is data volume a significant factor? Will you get significantly more bang for your storage buck through
+# Hadoop Distribution- Cloudera and Hortonworks support/favor different formats
+# Schema Evolution- Will the structure of your data evolve.
+# Processing Requirements- Will you be crunching the data and with what tools.
+# Read/Query Requirements- Will you be using SQL on Hadoop? Which engine.
+# Extract Requirements- Will you be extracting the data from Hadoop for import into an external database engine or other platform.
+# Storage Requirements- Is data volume a significant factor? Will you get significantly more bang for your storage buck through
 compression.
 
 
