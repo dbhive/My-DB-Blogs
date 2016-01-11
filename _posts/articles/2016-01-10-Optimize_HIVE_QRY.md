@@ -17,7 +17,7 @@ Hive query time has improved dramatically, enabling Hive to support both batch a
 However, many data scientists remain unfamiliar with basic techniques and best practices for running their Hive queries at maximum speed.
 In this blog post, I will highlight a few simple tricks I use most often to improve performance of my HIVE queries.
 
-* #1: Use Tez*
+### 1: Use Tez
 Hive can use the Apache Tez execution engine instead of the venerable Map-reduce engine. 
 I won’t go into details about the many benefits of using Tez which are mentioned here; 
 instead, I want to make a simple recommendation: if it’s not turned on by default in your environment, 
@@ -26,7 +26,7 @@ use Tez by setting to ‘true’ the following in the beginning of your Hive que
 
 With the above setting, every HIVE query you execute will take advantage of Tez.
 
-* #2: Use ORCFile*
+### 2: Use ORCFile
 Hive supports ORCfile, a new table storage format that sports fantastic speed improvements through techniques like predicate push-down,
 compression and more.
 Using ORCFile for every HIVE table should really be a no-brainer and extremely beneficial to get fast response times 
@@ -65,14 +65,14 @@ ingestion process due to other priorities. The benefits of ORCFile are so tangib
 demonstrated above – convert A into A_ORC and B into B_ORC and do the join that way, so that you benefit from faster queries immediately,
 with no dependencies on other teams
 
-* #3: Use Vectorization*
+### 3: Use Vectorization
 Vectorized query execution improves performance of operations like scans, aggregations, filters and joins, by performing them in batches of 1024 rows at once instead of single row each time.
 Introduced in Hive 0.13, this feature significantly improves query execution time, and is easily enabled with two parameters settings:
 
 set hive.vectorized.execution.enabled = true;
 set hive.vectorized.execution.reduce.enabled = true;
 
-* #4: cost based query optimization *
+### 4: cost based query optimization 
 Hive optimizes each query’s logical and physical execution plan before submitting for final execution. 
 These optimizations are not based on the cost of the query – that is, until now.
 A recent addition to Hive, Cost-based optimization, performs further optimizations based on query cost, resulting in potentially 
@@ -97,15 +97,17 @@ analyze table tweets compute statistics for columns;
 That’s it. Now executing a query using this table should result in a different execution plan that is faster because 
 of the cost calculation and different execution plan created by Hive.
 
-* #5 use map-side joins *
+### 5 use map-side joins 
+
+
 Another technique is to use map-side joins – by setting the following params
- 
+
 set hive.auto.convert.join=true;
 set hive.auto.convert.join.noconditionaltask=true;
 set hive.auto.convert.join.noconditionaltask.size=30000000;
- 
-You’ll know it’s being used when you see something like the following in the logs
- 
+
+You’ll know it’s being used when you see something like the following in the logs:
+
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
 Execution log at: /tmp/psgetl/psgetl_20150828051515_08972512-beb2-4da9-8da5-338092cdf940.log
@@ -116,9 +118,6 @@ Execution log at: /tmp/psgetl/psgetl_20150828051515_08972512-beb2-4da9-8da5-3380
 2015-08-28 05:16:42     Uploaded 1 File to: file:/tmp/psgetl/hive_2015-08-28_05-15-32_360_4897376719178160971-1/-local-10008/HashTable-Stage-3/MapJoin-mapfile11--.hashtable (527 bytes)
 2015-08-28 05:16:42     End of local task; Time Taken: 18.664 sec.
 Execution completed successfully
- 
- 
-To add to these, having data in ORC format helps in loads of way to speed up select queries and save space as well plus Vectorization that Chris mentions works on ORC only. Also, using Tez query engine formalizes the DAG of MR jobs, which helps in overall execution time.
-
+ 
 
 
