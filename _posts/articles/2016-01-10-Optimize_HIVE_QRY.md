@@ -2,7 +2,7 @@
 layout: post
 title: How to optimize HIVE queries
 excerpt: "How to optimize HIVE queries."
-modified: 2014-11-01
+modified: 2016-01-10
 categories: articles
 author: DB_Hive
 tags: [Hadoop]
