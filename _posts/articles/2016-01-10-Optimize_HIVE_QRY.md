@@ -102,9 +102,9 @@ of the cost calculation and different execution plan created by Hive.
 
 Another technique is to use map-side joins – by setting the following params:
 
-set hive.auto.convert.join=true;
-set hive.auto.convert.join.noconditionaltask=true;
-set hive.auto.convert.join.noconditionaltask.size=30000000;
+| set hive.auto.convert.join=true;
+|||set hive.auto.convert.join.noconditionaltask=true;
+| set hive.auto.convert.join.noconditionaltask.size=30000000;
 
 You’ll know it’s being used when you see something like the following in the logs:
 
