@@ -79,9 +79,9 @@ values and not log any errors. Unlike Hive, Impala handles mixed case column nam
 
 #### How to choose a file format?
 There are three types of performance to consider: 
-1. Write performance -- how fast can the data be written.
-2. Partial read performance -- how fast can you read individual columns within a file.
-3. Full read performance -- how fast can you read every data element in a file.
+* Write performance -- how fast can the data be written.
+* Partial read performance -- how fast can you read individual columns within a file.
+* Full read performance -- how fast can you read every data element in a file.
 
 
 A columnar, compressed file format like Parquet or ORC may optimize partial and full read performance, but they do so at the expense
