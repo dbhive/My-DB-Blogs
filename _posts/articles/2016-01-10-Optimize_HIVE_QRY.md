@@ -34,30 +34,30 @@ for your HIVE queries.
 As an example, consider two large tables A and B 
 (stored as text files, with some columns not all specified here), and a simple query like:
 
-SELECT  A.customerID, A.name, A.age, A.address join
- B.role, B.department, B.salary 
- ON A.customerID=B.customerID;
+    SELECT  A.customerID, A.name, A.age, A.address join
+     B.role, B.department, B.salary 
+     ON A.customerID=B.customerID;
+
 This query may take a long time to execute since tables A and B are both stored as TEXT. 
-Converting these tables to ORCFile format will usually reduce query time significantly:
+ Converting these tables to ORCFile format will usually reduce query time significantly:
+
+    CREATE TABLE A_ORC (
+     customerID int, name string, age int, address string
+    ) STORED AS ORC tblproperties (“orc.compress" = “SNAPPY”);
 
 
-CREATE TABLE A_ORC (
- customerID int, name string, age int, address string
-) STORED AS ORC tblproperties (“orc.compress" = “SNAPPY”);
-
-
-INSERT INTO TABLE A_ORC SELECT * FROM A;
+    INSERT INTO TABLE A_ORC SELECT * FROM A;
+    
+     CREATE TABLE B_ORC (
+      customerID int, role string, salary float, department string
+     ) STORED AS ORC tblproperties (“orc.compress" = “SNAPPY”);
  
-CREATE TABLE B_ORC (
- customerID int, role string, salary float, department string
-) STORED AS ORC tblproperties (“orc.compress" = “SNAPPY”);
+     INSERT INTO TABLE B_ORC SELECT * FROM B;
  
-INSERT INTO TABLE B_ORC SELECT * FROM B;
- 
-SELECT  A_ORC.customerID, A_ORC.name, 
- A_ORC.age, A_ORC.address join
- B_ORC.role, B_ORC.department, B_ORC.salary 
- ON A_ORC.customerID=B_ORC.customerID;
+    SELECT  A_ORC.customerID, A_ORC.name, 
+      A_ORC.age, A_ORC.address join
+      B_ORC.role, B_ORC.department, B_ORC.salary 
+     ON A_ORC.customerID=B_ORC.customerID;
  
 ORC supports compressed storage (with ZLIB or as shown above with SNAPPY) but also uncompressed storage.
 Converting base tables to ORC is often the responsibility of your ingest team, and it may take them some time to change the complete 
@@ -69,8 +69,8 @@ with no dependencies on other teams
 Vectorized query execution improves performance of operations like scans, aggregations, filters and joins, by performing them in batches of 1024 rows at once instead of single row each time.
 Introduced in Hive 0.13, this feature significantly improves query execution time, and is easily enabled with two parameters settings:
 
-set hive.vectorized.execution.enabled = true;
-set hive.vectorized.execution.reduce.enabled = true;
+    set hive.vectorized.execution.enabled = true;
+    set hive.vectorized.execution.reduce.enabled = true;
 
 ### 4: cost based query optimization 
 Hive optimizes each query’s logical and physical execution plan before submitting for final execution. 
@@ -78,11 +78,11 @@ These optimizations are not based on the cost of the query – that is, until no
 A recent addition to Hive, Cost-based optimization, performs further optimizations based on query cost, resulting in potentially 
 different decisions: how to order joins, which type of join to perform, degree of parallelism and others.
 To use cost-based optimization (also known as CBO), set the following parameters at the beginning of your query:
- 
-set hive.cbo.enable=true;
-set hive.compute.query.using.stats=true;
-set hive.stats.fetch.column.stats=true;
-set hive.stats.fetch.partition.stats=true;
+
+    set hive.cbo.enable=true;
+    set hive.compute.query.using.stats=true;
+    set hive.stats.fetch.column.stats=true;
+    set hive.stats.fetch.partition.stats=true;
 
 Then, prepare the data for CBO by running Hive’s “analyze” command to collect various statistics on the tables for which we want to use CBO.
 For example, in a table tweets we want to collect statistics about the table and about 2 columns: “sender” and “topic”:
@@ -102,9 +102,9 @@ of the cost calculation and different execution plan created by Hive.
 
 Another technique is to use map-side joins – by setting the following params:
 
-| set hive.auto.convert.join=true;
-|||set hive.auto.convert.join.noconditionaltask=true;
-| set hive.auto.convert.join.noconditionaltask.size=30000000;
+    set hive.auto.convert.join=true;
+    set hive.auto.convert.join.noconditionaltask=true;
+    set hive.auto.convert.join.noconditionaltask.size=30000000;
 
 You’ll know it’s being used when you see something like the following in the logs:
 
