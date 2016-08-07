@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kivas and Storm
+title: "Kivas and Storm"
 excerpt: "Kivas and Storm"
 modified: 2016-08-01
 categories: articles
