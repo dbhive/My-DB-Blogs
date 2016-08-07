@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kivas and Storm
-excerpt: "Journey from Relational DB to Hadoop."Kivas and Storm
+excerpt: "Kivas and Storm"
 modified: 2016-08-01
 categories: articles
 author: DB_Hive
