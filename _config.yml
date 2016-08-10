@@ -11,7 +11,7 @@ url: //dbhive.github.io/My-DB-Blogs
 
 permalink:   /:categories/:title/
 markdown:    kramdown
-highlighter: pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
