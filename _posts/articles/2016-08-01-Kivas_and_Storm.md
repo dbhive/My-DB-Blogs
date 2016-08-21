@@ -25,7 +25,7 @@ From this point, a set of exit points retrieve your messages from Kafka and deli
 
 In KIVAs you can create STORM topologies
 
-##Storm:
+## Storm:
 
 Storm is a real-time, distributed, fault-tolerant, computation system. Like Hadoop, it can process huge amounts of data—but does so in real time — with guaranteed reliability; that is, every message will be processed.
 
