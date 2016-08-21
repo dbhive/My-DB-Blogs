@@ -108,16 +108,16 @@ Another technique is to use map-side joins – by setting the following params:
 
 You’ll know it’s being used when you see something like the following in the logs:
 
-SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
-SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-Execution log at: /tmp/psgetl/psgetl_20150828051515_08972512-beb2-4da9-8da5-338092cdf940.log
-2015-08-28 05:16:24     Starting to launch local task to process map join;      maximum memory = 4261937152
-2015-08-28 05:16:39     Dump the side-table into file: file:/tmp/psgetl/hive_2015-08-28_05-15-32_360_4897376719178160971-1/-local-10008/HashTable-Stage-3/MapJoin-mapfile21--.hashtable
-2015-08-28 05:16:41     Uploaded 1 File to: file:/tmp/psgetl/hive_2015-08-28_05-15-32_360_4897376719178160971-1/-local-10008/HashTable-Stage-3/MapJoin-mapfile21--.hashtable (390642 bytes)
-2015-08-28 05:16:42     Dump the side-table into file: file:/tmp/psgetl/hive_2015-08-28_05-15-32_360_4897376719178160971-1/-local-10008/HashTable-Stage-3/MapJoin-mapfile11--.hashtable
-2015-08-28 05:16:42     Uploaded 1 File to: file:/tmp/psgetl/hive_2015-08-28_05-15-32_360_4897376719178160971-1/-local-10008/HashTable-Stage-3/MapJoin-mapfile11--.hashtable (527 bytes)
-2015-08-28 05:16:42     End of local task; Time Taken: 18.664 sec.
-Execution completed successfully
+    SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+    |SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+    |Execution log at: /tmp/psgetl/psgetl_20150828051515_08972512-beb2-4da9-8da5-338092cdf940.log
+    |2015-08-28 05:16:24     Starting to launch local task to process map join;      maximum memory = 4261937152
+    |2015-08-28 05:16:39     Dump the side-table into file:     |file:/tmp/psgetl/hive_2015-08-28_05-15-32_360_4897376719178160971-1/-local-10008/HashTable-Stage-3/MapJoin-mapfile21--.hashtable
+    |2015-08-28 05:16:41     Uploaded 1 File to:     |file:/tmp/psgetl/hive_2015-08-28_05-15-32_360_4897376719178160971-1/-local-10008/HashTable-Stage-3/MapJoin-mapfile21--.hashtable (390642 bytes)
+    |2015-08-28 05:16:42     Dump the side-table into file: file:/tmp/psgetl/hive_2015-08-28_05-15-32_360_4897376719178160971-1/-local-10008/HashTable-Stage-3/MapJoin-mapfile11--.hashtable
+    |2015-08-28 05:16:42     Uploaded 1 File to: file:/tmp/psgetl/hive_2015-08-28_05-15-32_360_4897376719178160971-1/-local-10008/HashTable-Stage-3/MapJoin-mapfile11--.hashtable (527 bytes)
+    |2015-08-28 05:16:42     End of local task; Time Taken: 18.664 sec.
+    |Execution completed successfully
  
 
 
